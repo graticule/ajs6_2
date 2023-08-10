@@ -1,10 +1,8 @@
-export default function getAttacks(obj) {
-  const { special } = obj;
+export default function getAttacks({ special }) {
   const result = [];
-  special.forEach((element) => {
-    const {
-      id, name, icon, description = 'Описание недоступно',
-    } = element;
+  special.forEach(({
+    id, name, icon, description = 'Описание недоступно',
+  }) => {
     result.push({
       id, name, icon, description,
     });
